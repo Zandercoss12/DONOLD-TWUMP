@@ -77,6 +77,9 @@ client.on('ready', () => {
   console.log('I am ready!');
 });
 
+client.on("guildMemberAdd", function(member) {
+  member.addRole(member.guild.roles.find("name", "Member"));
+});
 
 client.on("message", async message => {
   if(message.author.bot) return;
@@ -106,6 +109,10 @@ client.on("message", async message => {
   if(command === "8ball") {
   	if (args[1]) message.channel.sendMessages(fortunes[Math.floor(Math.random() * fortunes.length)]);
   	else message.channel.sendMessage("```diff\n- I do not understand```");
+  }
+
+  if(command === "help") {
+  	message.author.sendMessage("```md\n|--------<Commands>--------|\n[1]: help - gives you help menu (this one).\n[2]: info - gives information about me.\n[3]: wall - sends a meme about a wall.\n[4]: trumpmemes - sends more memes, about trump.\n[5]: 8ball - Ask me a yes/no question.\n|--------<Commands>--------|```\n**Commands always start with '~T'**");
   }
 
   setInterval(() => {

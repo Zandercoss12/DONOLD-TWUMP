@@ -2,7 +2,6 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const config = require("./config.json");
 
-// Variables //
 var wall = [
 	"https://tenor.com/view/donald-trump-wall-mexico-donald-wall-trump-gif-7202198",
 	"https://tenor.com/view/donald-trump-wall-solution-illegal-immigration-mexico-gif-4968392",
@@ -107,7 +106,7 @@ client.on("message", async message => {
   }
 
   if(command === "8ball") {
-  	if (args[1]) message.channel.sendMessages(fortunes[Math.floor(Math.random() * fortunes.length)]);
+  	if (args[1]) message.channel.sendMessage(fortunes[Math.floor(Math.random() * fortunes.length)]);
   	else message.channel.sendMessage("```diff\n- I do not understand```");
   }
 
@@ -115,13 +114,12 @@ client.on("message", async message => {
   	message.author.sendMessage("```md\n|--------<Commands>--------|\n[1]: help - gives you help menu (this one).\n[2]: info - gives information about me.\n[3]: wall - sends a meme about a wall.\n[4]: trumpmemes - sends more memes, about trump.\n[5]: 8ball - Ask me a yes/no question.\n|--------<Commands>--------|```\n**Commands always start with \'~T\'**");
   }
 
-  setInterval(() => {
+});
+
+setInterval(() => {
  http.get('http://discordjs-heroku.herokuapp.com');
 }, 900000);
 
 const port = process.env.PORT || 5000;
-
-});
-
 
 client.login(process.env.BOT_TOKEN);

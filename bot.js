@@ -108,7 +108,11 @@ client.on("message", async message => {
   	else message.channel.sendMessage("```diff\n- I do not understand```");
   }
 
-  
+  setInterval(() => {
+ http.get('http://discordjs-heroku.herokuapp.com');
+}, 900000);
+
+const port = process.env.PORT || 5000;
 
 });
 

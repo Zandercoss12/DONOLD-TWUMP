@@ -73,7 +73,7 @@ var fortunes = [
 
 client.on('ready', () => {
 
-	client.user.setPresence({game: {name: "~Thelp for commands!", type: 0}});
+	client.user.setPresence({game: {name: "-Thelp for commands!", type: 0}});
 	console.log('I am ready!');
 });
 
@@ -92,7 +92,7 @@ client.on("message", async message => {
 		var embed = new Discord.RichEmbed()
 		.setThumbnail(message.client.avatarURL)
 		.addField("What I am", "A bot.")
-		.addField("What I do", "Build walls.")
+		.addField("What I do", "I build walls.")
 		.addField("Am I a good bot?", "no")
 		.setColor(0x00FFFF)
 		message.channel.sendEmbed(embed);
@@ -112,7 +112,7 @@ client.on("message", async message => {
 	}
 
 	if(command === "help") {
-		message.author.sendMessage("```md\n|--------<Commands>--------|\n[1]: help - gives you help menu (this one).\n[2]: info - gives information about me.\n[3]: wall - sends a meme about a wall.\n[4]: trumpmemes - sends more memes, about trump.\n[5]: 8ball - Ask me a yes/no question.\n|--------<Commands>--------|```\n**Commands always start with ~T**");
+		message.author.sendMessage("```md\n|--------<Commands>--------|\n[1]: help - gives you help menu (this one).\n[2]: info - gives information about me.\n[3]: wall - sends a meme about a wall.\n[4]: trumpmemes - sends more memes, about trump.\n[5]: 8ball - Ask me a yes/no question.\n|--------<Commands>--------|```\n**Commands always start with -T**");
 	}
 
 

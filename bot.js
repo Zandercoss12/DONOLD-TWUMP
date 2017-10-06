@@ -112,7 +112,7 @@ client.on("message", async message => {
 	}
 
 	if(command === "help") {
-		message.author.sendMessage("```md\n|--------<Commands>--------|\n[1]: help - gives you help menu (this one).\n[2]: info - gives information about me.\n[3]: wall - sends a meme about a wall.\n[4]: trumpmemes - sends more memes, about trump.\n[5]: 8ball - Ask me a yes/no question.\n|--------<Commands>--------|```\n**Commands always start with \'~T\'**");
+		message.author.sendMessage("```md\n|--------<Commands>--------|\n[1]: help - gives you help menu (this one).\n[2]: info - gives information about me.\n[3]: wall - sends a meme about a wall.\n[4]: trumpmemes - sends more memes, about trump.\n[5]: 8ball - Ask me a yes/no question.\n|--------<Commands>--------|```\n**Commands always start with ~T**");
 	}
 
 

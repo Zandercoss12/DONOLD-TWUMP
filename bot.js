@@ -92,7 +92,7 @@ client.on("message", async message => {
   	.addField("What I do", "Build Walls")
   	.addField("Am I a good bot?", "no")
   	.setColor(0x00FFFF)
-  	message.channel.sendEmbed(embed;)
+  	message.channel.sendEmbed(embed);
   }
 
   if(command === "wall") {
